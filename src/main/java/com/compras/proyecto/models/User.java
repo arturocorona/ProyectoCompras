@@ -18,101 +18,76 @@ public class User {
     private Integer phone;
     private String address;
     private String email;
+    private String type;
 
-    public User() {
+    public User(){
     }
-
-    public User(Long user_id, String name, String last_name, Integer phone, String address, String email) {
+    
+    public User(Long user_id, String name, String last_name, Integer phone, String address, String email, String type) {
         this.user_id = user_id;
         this.name = name;
         this.last_name = last_name;
         this.phone = phone;
         this.address = address;
         this.email = email;
+        this.type = type;
     }
-    
-    /**
-     * @return the user_id
-     */
+
     public Long getUser_id() {
         return user_id;
     }
 
-    /**
-     * @param user_id the user_id to set
-     */
     public void setUser_id(Long user_id) {
         this.user_id = user_id;
     }
 
-    /**
-     * @return the name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * @param name the name to set
-     */
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * @return the last_name
-     */
     public String getLast_name() {
         return last_name;
     }
 
-    /**
-     * @param last_name the last_name to set
-     */
     public void setLast_name(String last_name) {
         this.last_name = last_name;
     }
 
-    /**
-     * @return the phone
-     */
     public Integer getPhone() {
         return phone;
     }
 
-    /**
-     * @param phone the phone to set
-     */
     public void setPhone(Integer phone) {
         this.phone = phone;
     }
 
-    /**
-     * @return the address
-     */
     public String getAddress() {
         return address;
     }
 
-    /**
-     * @param address the address to set
-     */
     public void setAddress(String address) {
         this.address = address;
     }
 
-    /**
-     * @return the email
-     */
     public String getEmail() {
         return email;
     }
 
-    /**
-     * @param email the email to set
-     */
     public void setEmail(String email) {
         this.email = email;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+    
     
 }
