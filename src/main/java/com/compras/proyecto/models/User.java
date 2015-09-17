@@ -1,17 +1,26 @@
 package com.compras.proyecto.models;
 
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
  *
  * Clase/entidad modelo de la tabla users.
+ *
  * @author Arturo Corona
  */
 @Entity
 @Table(name = "users")
 public class User {
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long user_id;
     private String name;
     private String last_name;
@@ -19,11 +28,14 @@ public class User {
     private String address;
     private String email;
     private String type;
+    @OneToMany(targetEntity = Order.class, mappedBy = "user",
+            orphanRemoval = true, cascade = CascadeType.ALL)
+    private List<Order> orders;
 
-    public User(){
+    public User() {
     }
-    
-    public User(Long user_id, String name, String last_name, Integer phone, String address, String email, String type) {
+
+    public User(Long user_id, String name, String last_name, Integer phone, String address, String email, String type, List<Order> orders) {
         this.user_id = user_id;
         this.name = name;
         this.last_name = last_name;
@@ -31,6 +43,7 @@ public class User {
         this.address = address;
         this.email = email;
         this.type = type;
+        this.orders = orders;
     }
 
     public Long getUser_id() {
@@ -88,6 +101,13 @@ public class User {
     public void setType(String type) {
         this.type = type;
     }
-    
-    
+
+    public List<Order> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+
 }
