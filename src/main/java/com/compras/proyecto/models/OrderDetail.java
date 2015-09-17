@@ -1,10 +1,16 @@
 
 package com.compras.proyecto.models;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  *
- * @author arturo
+ * Clase/entidad modelo de la tabla orders_detail.
+ * @author Arturo Corona
  */
+@Entity
+@Table(name = "orders_detail")
 public class OrderDetail {
     
     private Long order_id;

@@ -1,14 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.compras.proyecto.models;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  *
- * @author arturo
+ * Clase/entidad modelo de la tabla products.
+ * @author Arturo Corona
  */
+@Entity
+@Table(name = "products")
 public class Product {
 
     private Long product_id;

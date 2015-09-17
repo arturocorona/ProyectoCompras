@@ -39,7 +39,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.0.1.Final</version>
+            <version>4.2.6.Final</version>
         </dependency>
         <!-- optional -->
         <dependency>
@@ -87,5 +87,11 @@
     </dependencies>
     
     <name>Compras</name>
-    
+    <repositories>
+        <repository>
+            <id>unknown-jars-temp-repo</id>
+            <name>A temporary repository created by NetBeans for libraries and jars it could not identify. Please replace the dependencies in this repository with correct ones and delete this repository.</name>
+            <url>file:${project.basedir}/lib</url>
+        </repository>
+    </repositories>
 </project>

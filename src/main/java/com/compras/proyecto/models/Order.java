@@ -9,6 +9,7 @@ import javax.persistence.Table;
 
 /**
  *
+ * Clase/entidad modelo de la tabla orders.
  * @author Arturo Corona
  */
 @Entity
